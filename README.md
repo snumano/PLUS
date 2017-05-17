@@ -25,5 +25,26 @@ Gather all the off the shelf parts in the BOM file that you'll need for this ass
 So is completely parametric and precise to adjust tolerances
 [You can modify it for customization](https://gallery.autodesk.com/fusion360/projects/otto-diyplus) or further improvements!
 
+Special thanks to all #Ottobuilders that made and are making this project evolve:
+Davor Levstek 
+jarsoftelectrical
+Juan Felix Mateos
+Loreman
+Gerardo Barbarov Rostan
+Javier Isabel
+G4alileo
+Obijuan
+tritri62
+Octavio P Nogueira
+Gustavo Reynaga
+Rafael López
+Frank Lopez
+Jason Snow
+Pablo E. García Palacios
+Marco
+Liao Ping Lun
+Jayesh Chauhan
+If we skip one please tell us!
+
 ## License CC-BY-SA
 <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-sa/4.0/88x31.png" /></a><br /><span xmlns:dct="http://purl.org/dc/terms/" property="dct:title">Otto DIY</span> by <a xmlns:cc="http://creativecommons.org/ns#"  property="cc:attributionName"> [ottodiy.com](http://ottodiy.com) </a> is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Creative Commons Attribution-ShareAlike 4.0 International License</a>.
