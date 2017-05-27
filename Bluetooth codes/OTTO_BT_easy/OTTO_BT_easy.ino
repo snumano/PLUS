@@ -2,9 +2,8 @@
 //-- Easy Otto´s sketch controlled by BlueControl Android app. Each button has different functionallity
 //-- The app send a char each time a button is pressed.
 //-- "E" button enters obstacle avoidance mode
-//-- Otto basic firmware v2 adapted from Zowi (ottobot.org)https://github.com/OttoDIY/OttoDIY
+//-- Otto basic firmware v2 adapted from Zowi (ottodiy.com)https://github.com/OttoDIY/PLUS
 //-- CC BY SA
-//-- 04 December 2016
 //-- Adapted Pablo García pabloeweb@gmail.com 01 March 2017
 //-----------------------------------------------------------------
 #include <Servo.h> 
