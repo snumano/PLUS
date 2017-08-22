@@ -1,5 +1,5 @@
 
-# Otto DIY +
+# Otto DIY+
 "Otto DIY with steroids" 
 
 This Repository have all open source files for Otto DIY+ an interactive robot that anyone can make!,
@@ -9,10 +9,10 @@ Is completely open source, Arduino compatible, 3D printable, once you have all c
 
 This is a more advanced version requires some expertise and patience, if you want to start slow as a beginner  please go to [Otto DIY repository](https://github.com/OttoDIY/DIY)
 
-Start by downloading all files here.
+Start by [downloading all files here](https://github.com/OttoDIY/PLUS/archive/master.zip)
 
 ## For the hardware
-Gather all the off the shelf parts in the BOM file that you'll need for this assembly, then 3d print the latest .stl files and then follow the instruction manual to build your own robot.
+Gather all the off the shelf parts in the BOM file that you'll need for this assembly, then 3d print the  .stl files and then follow the instruction manual to build your own robot.
 
 ## For the programming
 1. Download & Install Arduino IDE: https://www.arduino.cc/en/Main/Software also this driver if you have a clone board: http://www.wch.cn/download/CH341SER_EXE.html for PC, or http://www.wch.cn/download/CH341SER_MAC_ZIP.html for MAC
@@ -20,6 +20,9 @@ Gather all the off the shelf parts in the BOM file that you'll need for this ass
 3. Open  for example OTTO_smooth_criminal.ino, make sure in tools you have "Board: Arduino Nano" "Processor ATmega328" and your Otto is connected to the corresponding port
 4. Upload code to your Otto and will dance!
 5. Make your own dance just modify the program using same functions
+6. Setup your Bluetooth module
+7. Upload the Bluetooth code
+8. Play with the APP
 
 ### Otto DIY + is  design using Autodesk Fusion 360
 So is completely parametric and precise to adjust tolerances
@@ -27,7 +30,6 @@ So is completely parametric and precise to adjust tolerances
 
 ### Hall of fame Otto builders list
 Our broad community is awesome! we have been developing and improving OttoDIY project together ;)
-
 
 | contribution  | date | builder name | country |
 | --- | --- | --- | --- |
@@ -82,12 +84,12 @@ Feel free to grab and mix ideas from this table for your Otto and if you are nic
 | Bubbles |light|DC fan|
 | crane |Buttons|+servos control|
 | Gripper |Tilt Sensor|+servo|
-| reaction to music  |keepon|Steam generator|
-| Follow music | MP3 SD card|Steam generator|
+| reaction to music  |keepon|vibrators|
+| Follow music | MP3 SD card|disco lights|
 | Voice commands like Wire Beings beta |telegram|multiple boards|
-| clap rhythm |IR|Steam generator|
+| clap rhythm |microphone|vibrators|
 
-code using ArduBlock, Mitily, Blockly duino, Bitbloq, scratchX, new MIT inventor APP
+coding we would like to use a scustom made version ArduBlock or Mitily or Blockly duino or Bitbloq or scratchX or APP for block programming
 
 ## License CC-BY-SA
 <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-sa/4.0/88x31.png" /></a><br /><span xmlns:dct="http://purl.org/dc/terms/" property="dct:title">Otto DIY</span> by <a xmlns:cc="http://creativecommons.org/ns#"  property="cc:attributionName"> [ottodiy.com](http://ottodiy.com) </a> is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Creative Commons Attribution-ShareAlike 4.0 International License</a>.
