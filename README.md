@@ -23,28 +23,77 @@ Gather all the off the shelf parts in the BOM file that you'll need for this ass
 
 ### Otto DIY + is  design using Autodesk Fusion 360
 So is completely parametric and precise to adjust tolerances
-[You can modify it for customization](https://gallery.autodesk.com/fusion360/projects/otto-diyplus) or further improvements!
+[You can modify it for customization](https://gallery.autodesk.com/fusion360/projects/otto-diyplus) or further improvements
 
-Special thanks to all #Ottobuilders that made and are making this project evolve:
-Davor Levstek 
-jarsoftelectrical
-Juan Felix Mateos
-Loreman
-Gerardo Barbarov Rostan
-Javier Isabel
-G4alileo
-Obijuan
-tritri62
-Octavio P Nogueira
-Gustavo Reynaga
-Rafael López
-Frank Lopez
-Jason Snow
-Pablo E. García Palacios
-Marco
-Liao Ping Lun
-Jayesh Chauhan
-If we skip one please tell us!
+### Hall of fame Otto builders list
+Our broad community is awesome! we have been developing and improving OttoDIY project together ;)
+
+| contribution  | date | builder name | country |
+| ------------- | ------------- | ------------- | ------------- | ------------- | ------------- |
+| oscilator | Jan 2015  |Obijuan |Spain  |
+| Zowi 3d | Dec 2015  |Javier Isabel |Spain |
+| Bobwi  | Jan 2016  |G4alileo |Spain  |
+| BT, battery, nose LED RGB emotion mood light | April 2016 |Davor Levstek  |Croatia |
+| Robonino with voice control |May 2016|Santiago|Spain |
+| Calibration tool  | June 2016 |Rafael López  |Spain |
+| FreeCAD model|August 2016|Juan Carlos López Sánchez |Spain |
+| ESPOtto voice | Sept 2016 |Gustavo Reynaga |Mexico|
+| Otto arms |Sept 2016|Jason Leung| Hong Kong |
+| Google Play android APP  | Oct 2016 |Juan Felix Mateos |Spain |
+| Switch alternative |Dec 2016|Robert Holt |United States |
+| Custom PCB  OttoDIY+ libraries | Jan 2017 |Jason Snow |England |
+| Single ladies dance| Jan 2017  |brico3D |Spain |
+| Nose and DIY APP |Feb 2017|Andrés Fernández Muñoz|Spain |
+| feedback  | March 2017   |Frank Lopez |United States |
+| feedback | March 2017  |Octavio P Nogueira |Brazil  |
+| feedback  | March 2017  |tritri62|??? |
+| Custom PCB | 	March 2017 |Marco|Italy |
+| XXL Head |March 2017|Markus Otte |Germany |
+| XGoBroRobo IR driven |March 2017|Jonathan Hess |Germany |
+| Easy BT Easy HC-06 | May 2017  |Pablo E. García Palacios  |Spain |
+| Custom PCB, battery booster | April 2017|Pedro 51|France |
+| graphical coding  | June 2017  |Liao Ping Lun  |China |
+| Otto bender mod| June 2017  |bricogeek |Spain |
+| remote control | July 2017  |Jayesh Chauhan |India  |
+| Customizable Otto 3D print |July 2017|Brandon Bowles |United States |
+| quadruped Otto | August 2017  |quadruped |China |
+
+Special thanks to all these #Ottobuilder that made and are making this project evolve and accessible to everyoone in the world. If we skip one please tell us!
+
+### Pendindg to develop idea list
+
+drumer 
+wheels - balancing 
+sumo 
+hands
+hover 
+train 
+spider 
+omniwheel 
+look around http://www.mi.com/xiaofang/
+timer #0f1a41
+Says
+writer+ following line
+Bubbles
+crane 
+Gripper
+keepon reaction to music 
+Follow music, need MP3 SD card forVoice Recognition from the phone
+clap rhythm
+Voice commands like Wire Beings beta
+Using ArduBlock
+Mitily
+Blockly duino
+Create our "own Bitbloq"
+Scratch - scratchX
+control from telegram http://diwo.bq.com/zowi-telegram-bot/
+control from laptop
+ultrasound gesture control
+multi position switch or variable resistor for modes
+magnet switch control
+Accelerometer 
+Tilt Sensor
+vibrators 
 
 ## License CC-BY-SA
 <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-sa/4.0/88x31.png" /></a><br /><span xmlns:dct="http://purl.org/dc/terms/" property="dct:title">Otto DIY</span> by <a xmlns:cc="http://creativecommons.org/ns#"  property="cc:attributionName"> [ottodiy.com](http://ottodiy.com) </a> is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Creative Commons Attribution-ShareAlike 4.0 International License</a>.
