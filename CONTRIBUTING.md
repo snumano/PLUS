@@ -29,7 +29,8 @@ or just send us the files we will upload for you and give the apropiate credits 
 
 ## Otto as Ed-tech tool
 Interested to donate? 
-Further plans with Otto in STEM education or looking to partner? you can contact us: camilo@ottodiy.com
+Otto DIY+ is approved as Educational project from Thingiverse; the biggest 3D print community!
+Further plans with Otto in STEAM education robotic workshops or looking to partner? you can contact us: camilo@ottodiy.com
 
 For now we are rewarding the best Otto builders and as always we will do it to keep sharing this knoweledge for FREE to the society.
 Regards from Otto 
