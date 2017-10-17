@@ -81,7 +81,7 @@ Feel free to grab and mix ideas from this table for your Otto and if you are nic
 | Humanoid |variable resistor modes|+servos control|
 | Spider 6-8 legs |ultrasound gesture|+servos control+vibrators|
 | hover or drone |accelerometer|+DC motor control|
-| look around http://www.mi.com/xiaofang/ |timer|new head|
+| look around xiaofang |timer|new head|
 | writer |encoders|DC+ pen holder|
 | following line |IR+encoders|step motors|
 | Bubbles |light|DC fan|
@@ -95,4 +95,4 @@ Feel free to grab and mix ideas from this table for your Otto and if you are nic
 coding we would like to use a scustom made version ArduBlock or Mitily or Blockly duino or Bitbloq or scratchX or APP for block programming
 
 ## License CC-BY-SA
-<a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-sa/4.0/88x31.png" /></a><br /><span xmlns:dct="http://purl.org/dc/terms/" property="dct:title">Otto DIY</span> by <a xmlns:cc="http://creativecommons.org/ns#"  property="cc:attributionName"> [ottodiy.com](http://ottodiy.com) </a> is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Creative Commons Attribution-ShareAlike 4.0 International License</a>.
+<a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-sa/4.0/88x31.png" /></a><br /><span xmlns:dct="http://purl.org/dc/terms/" property="dct:title">Otto DIY</span> by <a xmlns:cc="http://creativecommons.org/ns#"  property="cc:attributionName"> [www.ottodiy.com](http://www.ottodiy.com) </a> is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Creative Commons Attribution-ShareAlike 4.0 International License</a>.
