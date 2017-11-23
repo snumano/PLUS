@@ -3,7 +3,7 @@
 "Otto DIY with steroids" 
 
 This Repository have all open source files for Otto DIY+ an interactive robot that anyone can make!,
-Otto DIY + can make everything that Otto DIY does + Bluetooth + APP + switch + sensors + strength +... anything you might expand feel FREE to add and contribute.
+Otto DIY + can make everything that Otto DIY does + Bluetooth + APP + switch + sensors + strength +... anything you might expand feel FREE to add and contribute. for LED Matrix we have a separate repository here https://github.com/OttoDIY/Matrix_hands
 Is completely open source, Arduino compatible, 3D printable, once you have all components and tools you will be able to build your own Otto
 <img src="OTTO_DIY_PLUS.png" width="900" align="center">
 
@@ -23,9 +23,8 @@ Gather all the off the shelf parts in the BOM file that you'll need for this ass
 6. Setup your Bluetooth module
 7. Upload the Bluetooth code
 8. Play with the APP
-
-+LED mouth Matrix use the [MAX7219](https://es.aliexpress.com/item/1pcs-MAX7219-dot-matrix-module-microcontroller-module-display-module-finished-goods/32725083862.html?spm=2114.search0104.3.97.cyRMWM&ws_ab_test=searchweb0_0%2Csearchweb201602_2_10152_10065_10151_10068_5460011_10307_10301_10303_10137_10060_10155_10154_10056_10055_10054_5470020_10059_100031_10099_10103_10102_10052_10053_10142_10107_10050_10051_5380020_10326_10084_10083_10080_10082_10081_10110_10111_10112_10113_10114_10179_10312_10313_10314_10078_10079_10073_5540020%2Csearchweb201603_2%2CppcSwitch_4&btsid=a23e196a-27ae-44de-9cd0-4252f0e1a4c3&algo_expid=f2ef828c-d2ef-43a0-abc1-84d06ab3babd-12&algo_pvid=f2ef828c-d2ef-43a0-abc1-84d06ab3babd)
-+Touch sensor use this [2PCS TTP223 Capacitive Touch Switch Button Self-Lock Module for Arduino](http://www.ebay.com/itm/2PCS-TTP223-Capacitive-Touch-Switch-Button-Self-Lock-Module-for-Arduino/131662428748?ssPageName=STRK%3AMEBIDX%3AIT&_trksid=p2057872.m2749.l2649)
+9. Coding with mbloc (scratch graphical programming based interface)
+10. Share in our Otto builder Facebook group https://www.facebook.com/ottodiy/groups/
 
 ### Otto DIY + is  design using Autodesk Fusion 360
 So is completely parametric and precise to adjust tolerances
@@ -65,6 +64,11 @@ Our broad community is awesome! we have been developing and improving OttoDIY pr
 | Customizable Otto 3D print |July 2017|Brandon Bowles |United States |
 | quadruped Otto | August 2017  |quadruped |China |
 | control from laptop | August 2017  |SungHyun Ryu |South Korea |
+| touch code | September 2017  |Alberto |Spain |
+| Otto wheels | September 2017 |Jason Snow |England |
+| Tito +| September 2017 |Jason Snow |England |
+| 6 modes code | October 2017  |Davor Levstek  |Croatia |
+| mbloc scratch graphical coding| November 2017  |Hien Phan |Vietnam |
 
 Special thanks to all these #Ottobuilder that made and are making this project evolve and accessible to everyoone in the world. If we skip one please tell us!
 
@@ -74,7 +78,7 @@ Feel free to grab and mix ideas from this table for your Otto and if you are nic
 | Function-Feature  | sensor(input) | movement (output) | 
 | --- | --- | --- | 
 | drumer  |microphone|hands+stick|
-| Car-balancing  |accelerometer|wheels|
+| Car-balancing  |accelerometer|4x4 wheels|
 | Sumo |IR|wheels+bumper|
 | omniwheel |magnet switch|wheels+rollers|
 | Train |IR|Steam generator|
@@ -91,8 +95,6 @@ Feel free to grab and mix ideas from this table for your Otto and if you are nic
 | Follow music | MP3 SD card|disco lights|
 | Voice commands like Wire Beings beta |telegram|multiple boards|
 | clap rhythm |microphone|vibrators|
-
-coding we would like to use a scustom made version ArduBlock or Mitily or Blockly duino or Bitbloq or scratchX or APP for block programming
-
+coding we would like to use a custom made  APP for block programming
 ## License CC-BY-SA
 <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-sa/4.0/88x31.png" /></a><br /><span xmlns:dct="http://purl.org/dc/terms/" property="dct:title">Otto DIY</span> by <a xmlns:cc="http://creativecommons.org/ns#"  property="cc:attributionName"> [www.ottodiy.com](http://www.ottodiy.com) </a> is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Creative Commons Attribution-ShareAlike 4.0 International License</a>.
