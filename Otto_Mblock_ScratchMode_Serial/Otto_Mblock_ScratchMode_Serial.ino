@@ -69,9 +69,9 @@ bool obstacleDetected = false;
 ///////////////////////////////////////////////////////////////////
 void setup(){
 
-  //Serial communication initialization
+  //Serial communication initialization USB cable (115200)
   //BT.begin(9600);  
-  Serial.begin(9600);
+  Serial.begin(115200);
   
   Vbot.init(HIP_L, HIP_R, FOOT_L, FOOT_R, false, PIN_NoiseSensor, PIN_Buzzer,PIN_Trigger, PIN_Echo);  
   // [No calibrate home position] [ SRF04 Echo to D9, Trigger to D10 ] [ Buzzer to D11(High level active)]
