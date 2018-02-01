@@ -20,10 +20,10 @@ Gather all the off the shelf parts in the BOM file that you'll need for this ass
 3. Open  for example OTTO_smooth_criminal.ino, make sure in tools you have "Board: Arduino Nano" "Processor ATmega328" and your Otto is connected to the corresponding port
 4. Upload code to your Otto and will dance!
 5. Make your own dance just modify the program using same functions
-6. Setup your Bluetooth module
-7. Upload the Bluetooth code
-8. Play with the APP
-9. Coding with mbloc (scratch graphical programming based interface)
+6. Use mblock.cc for fast and easy graphical programming based on Scratch
+7. Setup your Bluetooth module
+8. Upload the Bluetooth code
+9. Play with the APP
 10. Share in our Otto builder Facebook group https://www.facebook.com/ottodiy/groups/
 
 ### Otto DIY + is  design using Autodesk Fusion 360
@@ -68,7 +68,16 @@ Our broad community is awesome! we have been developing and improving OttoDIY pr
 | Otto wheels | September 2017 |Jason Snow |England |
 | Tito +| September 2017 |Jason Snow |England |
 | 6 modes code | October 2017  |Davor Levstek  |Croatia |
+| Otto accessories| October 2017  |Lucid Wolf|Australia |
+| Otto accessories Halloween  | October 2017  |Trish Davies  |Australia |
 | mbloc scratch graphical coding| November 2017  |Hien Phan |Vietnam |
+| Otto Santa Claus| December 2017  |Dreamfactory  |Argentina |
+| Otto Nutcraker| December 2017  |Dreamfactory  |Argentina |
+| SelfProgramming| December 2017  |YoJuLab  |South Korea |
+| open APP inventor | January 2018 |Jason Snow |England |
+| LED eyes | January 2018 |Mr. Chan|China |
+| Otto learning| January 2018  |Hien Phan |Vietnam |
+| new APP BETA | February 2018 |Jason Snow |England |
 
 Special thanks to all these #Ottobuilder that made and are making this project evolve and accessible to everyoone in the world. If we skip one please tell us!
 
