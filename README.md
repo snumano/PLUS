@@ -5,7 +5,7 @@
 This Repository have all open source files for Otto DIY+ an interactive robot that anyone can make!,
 Otto DIY + can make everything that Otto DIY does + Bluetooth + APP + switch + sensors + strength +... anything you might expand feel FREE to add and contribute. for LED Matrix we have a separate repository here https://github.com/OttoDIY/Matrix_hands
 Is completely open source, Arduino compatible, 3D printable, once you have all components and tools you will be able to build your own Otto
-<img src="OTTO_DIY_PLUS.png" width="900" align="center">
+<img src="https://github.com/OttoDIY/PLUS/blob/master/APP/OttoDIY%2B.jpg" width="900" align="center">
 
 This is a more advanced version requires some expertise and patience, if you want to start slow as a beginner  please go to [Otto DIY repository](https://github.com/OttoDIY/DIY)
 
@@ -14,19 +14,24 @@ Start by [downloading all files here](https://github.com/OttoDIY/PLUS/archive/ma
 ## For the hardware
 Gather all the off the shelf parts in the BOM file that you'll need for this assembly, then 3d print the  .stl files and then follow the instruction manual to build your own robot.
 
-## For the programming
+## For the quick start programming and learners
+1. download mBlock.cc V3; is an opensource software released by MakeBlock for easy programming Robot by Drop and Drag blocks. Based on Scratch 2.0 (MIT), beside sharing the great Feature of Scratch, mBlock also integrated an Arduino Code generator for upload program into Arduino based Hardware.
+2. install Otto Extension in mBlock software use Arduino mode
+3. drag and drop functions, dance, sounds and conditionals from robot Otto blocks
+4. connect and check COM port
+5. upload your own code! 
+
+## For the advanced programming
 1. Download & Install Arduino IDE: https://www.arduino.cc/en/Main/Software also this driver if you have a clone board: http://www.wch.cn/download/CH341SER_EXE.html for PC, or http://www.wch.cn/download/CH341SER_MAC_ZIP.html for MAC
 2. Copy all libraries to C:\Users\user\Documents\Arduino\libraries (or wherever your library folder is installed):
-3. Open  for example OTTO_smooth_criminal.ino, make sure in tools you have "Board: Arduino Nano" "Processor ATmega328" and your Otto is connected to the corresponding port
-4. Upload code to your Otto and will dance!
-5. Make your own dance just modify the program using same functions
-6. Use mblock.cc for fast and easy graphical programming based on Scratch
-7. Setup your Bluetooth module
-8. Upload the Bluetooth code
-9. Play with the APP
-10. Share in our Otto builder Facebook group https://www.facebook.com/ottodiy/groups/
+3. Open  any .ino code, make sure in tools you have "Board: Arduino Nano" "Processor ATmega328" and your Otto is connected to the corresponding port
+4. Upload code to your Otto
+5. Check or setup your Bluetooth module baud rate
+6. Upload the Bluetooth APP code to Otto DIY+
+7. Play with the APP
+8. Share in our Otto builder Facebook group https://www.facebook.com/ottodiy/groups/
 
-### Otto DIY + is  design using Autodesk Fusion 360
+### Otto DIY+ is  design using Autodesk Fusion 360
 So is completely parametric and precise to adjust tolerances
 [You can modify it for customization](https://gallery.autodesk.com/fusion360/projects/otto-diyplus) or further improvements
 
