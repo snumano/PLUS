@@ -97,7 +97,7 @@ Feel free to grab and mix ideas from this table for your Otto and if you are nic
 | omniwheel |magnet switch|wheels+rollers|
 | Train |IR|Steam generator|
 | Humanoid |variable resistor modes|+servos control|
-| Spider 6-8 legs |ultrasound gesture|+servos control+vibrators|
+| Spider 6-8 legs |gestures|+vibrators|
 | hover or drone |accelerometer|+DC motor control|
 | look around xiaofang |timer|new head|
 | writer |encoders|DC+ pen holder|
@@ -107,8 +107,8 @@ Feel free to grab and mix ideas from this table for your Otto and if you are nic
 | Gripper |Tilt Sensor|+servo|
 | reaction to music  |keepon|vibrators|
 | Follow music | MP3 SD card|disco lights|
-| Voice commands like Wire Beings beta |telegram|multiple boards|
+| Voice commands |telegram|multiple boards|
 | clap rhythm |microphone|vibrators|
-coding we would like to use a custom made  APP for block programming
+
 ## License CC-BY-SA
 <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-sa/4.0/88x31.png" /></a><br /><span xmlns:dct="http://purl.org/dc/terms/" property="dct:title">Otto DIY</span> by <a xmlns:cc="http://creativecommons.org/ns#"  property="cc:attributionName"> [www.ottodiy.com](http://www.ottodiy.com) </a> is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Creative Commons Attribution-ShareAlike 4.0 International License</a>.
