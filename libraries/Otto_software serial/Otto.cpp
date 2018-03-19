@@ -8,8 +8,8 @@
 
 
 #include "Otto.h"
-#include <Oscillator.h>
-#include <US.h>
+#include "Oscillator.h"
+#include "US.h"
 
 
 
@@ -29,7 +29,7 @@ void Otto::init(int YL, int YR, int RL, int RR, bool load_calibration, int Noise
       if (servo_trim > 128) servo_trim -= 256;
       servo[i].SetTrim(servo_trim);
     }
-  }
+  } 
   
   for (int i = 0; i < 4; i++) servo_position[i] = 90;
 
@@ -42,6 +42,10 @@ void Otto::init(int YL, int YR, int RL, int RR, bool load_calibration, int Noise
 
   pinMode(Buzzer,OUTPUT);
   pinMode(NoiseSensor,INPUT);
+  
+  ledmatrix.init();
+  ledmatrix.setIntensity(1);
+
 }
 
 ///////////////////////////////////////////////////////////////////
@@ -64,6 +68,7 @@ void Otto::detachServos(){
 ///////////////////////////////////////////////////////////////////
 //-- OSCILLATORS TRIMS ------------------------------------------//
 ///////////////////////////////////////////////////////////////////
+
 void Otto::setTrims(int YL, int YR, int RL, int RR) {
   servo[0].SetTrim(YL);
   servo[1].SetTrim(YR);
@@ -520,6 +525,117 @@ void Otto::flapping(float steps, int T, int h, int dir){
 }
 
 
+///////////////////////////////////////////////////////////////////
+//-- MOUTHS & ANIMATIONS ----------------------------------------//
+///////////////////////////////////////////////////////////////////
+
+unsigned long int Otto::getMouthShape(int number){
+  unsigned long int types []={zero_code,one_code,two_code,three_code,four_code,five_code,six_code,seven_code,eight_code,
+  nine_code,smile_code,happyOpen_code,happyClosed_code,heart_code,bigSurprise_code,smallSurprise_code,tongueOut_code,
+  vamp1_code,vamp2_code,lineMouth_code,confused_code,diagonal_code,sad_code,sadOpen_code,sadClosed_code,
+  okMouth_code, xMouth_code,interrogation_code,thunder_code,culito_code,angry_code};
+
+  return types[number];
+}
+
+
+unsigned long int Otto::getAnimShape(int anim, int index){
+
+  unsigned long int littleUuh_code[]={
+     0b00000000000000001100001100000000,
+     0b00000000000000000110000110000000,
+     0b00000000000000000011000011000000,
+     0b00000000000000000110000110000000,
+     0b00000000000000001100001100000000,
+     0b00000000000000011000011000000000,
+     0b00000000000000110000110000000000,
+     0b00000000000000011000011000000000  
+  };
+
+  unsigned long int dreamMouth_code[]={
+     0b00000000000000000000110000110000,
+     0b00000000000000010000101000010000,  
+     0b00000000011000100100100100011000,
+     0b00000000000000010000101000010000           
+  };
+
+  unsigned long int adivinawi_code[]={
+     0b00100001000000000000000000100001,
+     0b00010010100001000000100001010010,
+     0b00001100010010100001010010001100,
+     0b00000000001100010010001100000000,
+     0b00000000000000001100000000000000,
+     0b00000000000000000000000000000000
+  };
+
+  unsigned long int wave_code[]={
+     0b00001100010010100001000000000000,
+     0b00000110001001010000100000000000,
+     0b00000011000100001000010000100000,
+     0b00000001000010000100001000110000,
+     0b00000000000001000010100100011000,
+     0b00000000000000100001010010001100,
+     0b00000000100000010000001001000110,
+     0b00100000010000001000000100000011,
+     0b00110000001000000100000010000001,
+     0b00011000100100000010000001000000    
+  };
+unsigned long int otto_code[]={
+     0b00001100010010010010010010001100,
+     0b00000000000000000000000000000000,
+     0b00011100001000001000001000001000,
+     0b00000000000000000000000000000000,
+     0b00011100001000001000001000001000,
+     0b00000000000000000000000000000000,
+     0b00001100010010010010010010001100,
+     0b00000000000000000000000000000000  
+  };
+
+
+  switch  (anim){
+
+    case littleUuh:
+        return littleUuh_code[index];
+        break;
+    case dreamMouth:
+        return dreamMouth_code[index];
+        break;
+    case adivinawi:
+        return adivinawi_code[index];
+        break;
+    case wave:
+        return wave_code[index];
+        break;  
+    case otto:
+        return otto_code[index];
+        break;          
+  }   
+}
+
+
+void Otto::putAnimationMouth(unsigned long int aniMouth, int index){
+
+      ledmatrix.writeFull(getAnimShape(aniMouth,index));
+}
+
+
+void Otto::putMouth(unsigned long int mouth, bool predefined){
+
+  if (predefined){
+    ledmatrix.writeFull(getMouthShape(mouth));
+  }
+  else{
+    ledmatrix.writeFull(mouth);
+  }
+}
+
+
+void Otto::clearMouth(){
+
+  ledmatrix.clearMatrix();
+}
+
+
 
 
 
@@ -597,120 +713,6 @@ double Otto::getBatteryVoltage(){
     return batteryLevel;
 }
 
-
-///////////////////////////////////////////////////////////////////
-//-- MOUTHS & ANIMATIONS ----------------------------------------//
-///////////////////////////////////////////////////////////////////
-
-unsigned long int Otto::getMouthShape(int number){
-  unsigned long int types []={zero_code,one_code,two_code,three_code,four_code,five_code,six_code,seven_code,eight_code,
-  nine_code,smile_code,happyOpen_code,happyClosed_code,heart_code,bigSurprise_code,smallSurprise_code,tongueOut_code,
-  vamp1_code,vamp2_code,lineMouth_code,confused_code,diagonal_code,sad_code,sadOpen_code,sadClosed_code,
-  okMouth_code, xMouth_code,interrogation_code,thunder_code,culito_code,angry_code};
-
-  return types[number];
-}
-
-
-unsigned long int Otto::getAnimShape(int anim, int index){
-
-  unsigned long int littleUuh_code[]={
-     0b00000000000000001100001100000000,
-     0b00000000000000000110000110000000,
-     0b00000000000000000011000011000000,
-     0b00000000000000000110000110000000,
-     0b00000000000000001100001100000000,
-     0b00000000000000011000011000000000,
-     0b00000000000000110000110000000000,
-     0b00000000000000011000011000000000  
-  };
-
-  unsigned long int dreamMouth_code[]={
-     0b00000000000000000000110000110000,
-     0b00000000000000010000101000010000,  
-     0b00000000011000100100100100011000,
-     0b00000000000000010000101000010000           
-  };
-
-  unsigned long int adivinawi_code[]={
-     0b00100001000000000000000000100001,
-     0b00010010100001000000100001010010,
-     0b00001100010010100001010010001100,
-     0b00000000001100010010001100000000,
-     0b00000000000000001100000000000000,
-     0b00000000000000000000000000000000
-  };
-
-  unsigned long int wave_code[]={
-     0b00001100010010100001000000000000,
-     0b00000110001001010000100000000000,
-     0b00000011000100001000010000100000,
-     0b00000001000010000100001000110000,
-     0b00000000000001000010100100011000,
-     0b00000000000000100001010010001100,
-     0b00000000100000010000001001000110,
-     0b00100000010000001000000100000011,
-     0b00110000001000000100000010000001,
-     0b00011000100100000010000001000000    
-  };
-
-
-  unsigned long int otto_code[]={
-     0b00001100010010010010010010001100,
-     0b00000000000000000000000000000000,
-     0b00011100001000001000001000001000,
-     0b00000000000000000000000000000000,
-     0b00011100001000001000001000001000,
-     0b00000000000000000000000000000000,
-     0b00001100010010010010010010001100,
-     0b00000000000000000000000000000000  
-  };
-
-
-  switch  (anim){
-
-    case littleUuh:
-        return littleUuh_code[index];
-        break;
-    case dreamMouth:
-        return dreamMouth_code[index];
-        break;
-    case adivinawi:
-        return adivinawi_code[index];
-        break;
-    case wave:
-        return wave_code[index];
-        break;
-    case otto:
-        return otto_code[index];
-        break;        
-  }   
-}
-
-
-void Otto::putAnimationMouth(unsigned long int aniMouth, int index){
-
-      ledmatrix.writeFull(getAnimShape(aniMouth,index));
-}
-
-
-void Otto::putMouth(unsigned long int mouth, bool predefined){
-
-  if (predefined){
-    ledmatrix.writeFull(getMouthShape(mouth));
-  }
-  else{
-    ledmatrix.writeFull(mouth);
-  }
-}
-
-
-void Otto::clearMouth(){
-
-  ledmatrix.clearMatrix();
-}
-
-
 ///////////////////////////////////////////////////////////////////
 //-- SOUNDS -----------------------------------------------------//
 ///////////////////////////////////////////////////////////////////
@@ -727,7 +729,14 @@ void Otto::_tone (float noteFrequency, long noteDuration, int silentDuration){
       //noTone(PIN_Buzzer);
       delay(silentDuration);     
 }
-
+///////
+void Otto::_playNote(float noteFrequency, long noteDuration)
+{
+  tone(Otto::pinBuzzer, noteFrequency, noteDuration);
+  int pauseBetweenNotes = noteDuration * 1.30;
+    delay(pauseBetweenNotes);
+    noTone(Otto::pinBuzzer);
+}
 
 void Otto::bendTones (float initFrequency, float finalFrequency, float prop, long noteDuration, int silentDuration){
 
@@ -863,6 +872,91 @@ void Otto::sing(int songName){
 
   }
 }
+///////////////////////////////////////////////////////////////////
+void Otto::move(int moveID,int time, int _moveSize){
+  int T = time;
+  int moveSize;
+  moveSize = _moveSize;
+  switch (moveID) {
+    case 0:
+      home();
+      break;
+    case 1: //M 1 1000 
+      walk(1,T,1);
+      break;
+    case 2: //M 2 1000 
+      walk(1,T,-1);
+      break;
+    case 3: //M 3 1000 
+     turn(1,T,1);
+      break;
+    case 4: //M 4 1000 
+      turn(1,T,-1);
+      break;
+    case 5: //M 5 1000 30 
+      updown(1,T,moveSize);
+      break;
+    case 6: //M 6 1000 30
+   
+      moonwalker(1,T,moveSize,1);
+      break;
+    case 7: //M 7 1000 30
+     
+      moonwalker(1,T,moveSize,-1);
+      break;
+    case 8: //M 8 1000 30
+    
+      swing(1,T,moveSize);
+      break;
+    case 9: //M 9 1000 30 
+   
+      crusaito(1,T,moveSize,1);
+      break;
+    case 10: //M 10 1000 30
+     
+      crusaito(1,T,moveSize,-1);
+      break;
+    case 11: //M 11 1000 
+      jump(1,T);
+      break;
+    case 12: //M 12 1000 30
+    
+      flapping(1,T,moveSize,1);
+      break;
+    case 13: //M 13 1000 30
+    
+      flapping(1,T,moveSize,-1);
+      break;
+    case 14: //M 14 1000 20
+    
+      tiptoeSwing(1,T,moveSize);
+      break;
+    case 15: //M 15 500 
+      bend(1,T,1);
+      break;
+    case 16: //M 16 500 
+      bend(1,T,-1);
+      break;
+    case 17: //M 17 500 
+      shakeLeg(1,T,1);
+      break;
+    case 18: //M 18 500 
+      shakeLeg(1,T,-1);
+      break;
+    case 19: //M 19 500 20
+    
+      jitter(1,T,moveSize);
+      break;
+    case 20: //M 20 500 15
+    
+      ascendingTurn(1,T,moveSize);
+      break;
+    default:
+      break;
+  }
+
+  
+}
 
 
 
@@ -897,16 +991,16 @@ void Otto::playGesture(int gesture){
         sing(S_happy_short);
 
         home();
-        putMouth(happyOpen);
+       putMouth(happyOpen);
     break;
 
 
     case OttoSuperHappy:
-        putMouth(happyOpen);
+       putMouth(happyOpen);
         sing(S_happy);
-        putMouth(happyClosed);
+       putMouth(happyClosed);
         tiptoeSwing(1,500,20);
-        putMouth(happyOpen);
+       putMouth(happyOpen);
         sing(S_superHappy);
         putMouth(happyClosed);
         tiptoeSwing(1,500,20); 
@@ -917,16 +1011,16 @@ void Otto::playGesture(int gesture){
 
 
     case OttoSad: 
-        putMouth(sad);
+       putMouth(sad);
         _moveServos(700, sadPos);     
         bendTones(880, 830, 1.02, 20, 200);
-        putMouth(sadClosed);
+       putMouth(sadClosed);
         bendTones(830, 790, 1.02, 20, 200);  
-        putMouth(sadOpen);
+       putMouth(sadOpen);
         bendTones(790, 740, 1.02, 20, 200);
         putMouth(sadClosed);
         bendTones(740, 700, 1.02, 20, 200);
-        putMouth(sadOpen);
+       putMouth(sadOpen);
         bendTones(700, 669, 1.02, 20, 200);
         putMouth(sad);
         delay(500);
@@ -943,19 +1037,19 @@ void Otto::playGesture(int gesture){
         for(int i=0; i<4;i++){
           putAnimationMouth(dreamMouth,0);
           bendTones (100, 200, 1.04, 10, 10);
-          putAnimationMouth(dreamMouth,1);
+         putAnimationMouth(dreamMouth,1);
           bendTones (200, 300, 1.04, 10, 10);  
           putAnimationMouth(dreamMouth,2);
           bendTones (300, 500, 1.04, 10, 10);   
           delay(500);
-          putAnimationMouth(dreamMouth,1);
+        putAnimationMouth(dreamMouth,1);
           bendTones (400, 250, 1.04, 10, 1); 
-          putAnimationMouth(dreamMouth,0);
+         putAnimationMouth(dreamMouth,0);
           bendTones (250, 100, 1.04, 10, 1); 
           delay(500);
         } 
 
-        putMouth(lineMouth);
+       putMouth(lineMouth);
         sing(S_cuddly);
 
         home();  
@@ -968,7 +1062,7 @@ void Otto::playGesture(int gesture){
         delay(300);     
         putMouth(lineMouth);
         sing(S_fart1);  
-        putMouth(tongueOut);
+       putMouth(tongueOut);
         delay(250);
         _moveServos(500,fartPos_2);
         delay(300);
@@ -985,7 +1079,7 @@ void Otto::playGesture(int gesture){
 
         home(); 
         delay(500); 
-        putMouth(happyOpen);
+       putMouth(happyOpen);
     break;
 
 
@@ -1007,7 +1101,7 @@ void Otto::playGesture(int gesture){
 
         home(); 
         sing(S_happy_short);  
-        putMouth(happyOpen);
+       putMouth(happyOpen);
     break;
 
 
@@ -1106,13 +1200,13 @@ void Otto::playGesture(int gesture){
               noteW-=101;
             }
             for(int index = 0; index<10; index++){
-              putAnimationMouth(wave,index);
+             putAnimationMouth(wave,index);
               bendTones(noteW, noteW-100, 1.02, 10, 10); 
               noteW-=101;
             }
         }    
 
-        clearMouth();
+       clearMouth();
         delay(100);
         putMouth(happyOpen);
     break;
@@ -1120,7 +1214,7 @@ void Otto::playGesture(int gesture){
     case OttoVictory:
         
         putMouth(smallSurprise);
-        //final pos   = {90,90,150,30}
+      //  final pos   = {90,90,150,30}
         for (int i = 0; i < 60; ++i){
           int pos[]={90,90,90+i,90-i};  
           _moveServos(10,pos);
@@ -1128,7 +1222,7 @@ void Otto::playGesture(int gesture){
         }
 
         putMouth(bigSurprise);
-        //final pos   = {90,90,90,90}
+     //   final pos   = {90,90,90,90}
         for (int i = 0; i < 60; ++i){
           int pos[]={90,90,150-i,30+i};  
           _moveServos(10,pos);
@@ -1162,7 +1256,7 @@ void Otto::playGesture(int gesture){
         _moveServos(300,bendPos_3);
         _tone(300,200,1);
         _moveServos(300,bendPos_4);
-        putMouth(xMouth);
+       putMouth(xMouth);
 
         detachServos();
         _tone(150,2200,1);

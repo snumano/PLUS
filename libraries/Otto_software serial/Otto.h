@@ -2,17 +2,17 @@
 #define Otto_h
 
 #include <Servo.h>
-#include <Oscillator.h>
+#include "Oscillator.h"
 #include <EEPROM.h>
 
-#include <US.h>
+#include "US.h"
 #include "MaxMatrix.h"
-#include <BatReader.h>
+#include "BatReader.h"
 
 #include "Otto_mouths.h"
 #include "Otto_sounds.h"
 #include "Otto_gestures.h"
-
+#include "SoftSerialCommand.h"
 
 //-- Constants
 #define FORWARD     1
@@ -23,16 +23,26 @@
 #define MEDIUM      15
 #define BIG         30
 
+#define HIP_L   2        // connect Servo Hip left to D2
+#define FOOT_L  4        // Connect Servo Foot Left to D4
+#define HIP_R   3        // Connect Servo Hip right to D3
+#define FOOT_R  5        // COnnect Servo Foot Right to D5
+
 #define PIN_Buzzer  13
 #define PIN_Trigger 8
 #define PIN_Echo    9
 #define PIN_NoiseSensor A6
-
+///define Bluetooth in SoftwareSerial 
+#define BT_Rx   6  
+#define BT_Tx   7
+//define Max7219 pins 
+#define PIN_DIN    10   //max 7219
+#define PIN_CS     11
+#define PIN_CLK    12
 
 class Otto
 {
   public:
-
     //-- Otto initialization
     void init(int YL, int YR, int RL, int RR, bool load_calibration=true, int NoiseSensor=PIN_NoiseSensor, int Buzzer=PIN_Buzzer, int USTrigger=PIN_Trigger, int USEcho=PIN_Echo);
 
@@ -70,10 +80,10 @@ class Otto
     void moonwalker(float steps=1, int T=900, int h=20, int dir=LEFT);
     void crusaito(float steps=1, int T=900, int h=20, int dir=FORWARD);
     void flapping(float steps=1, int T=1000, int h=20, int dir=FORWARD);
-
+    void move(int moveID,int time, int _moveSize);
     //-- Sensors functions
     float getDistance(); //US sensor
-    int getNoise();      //Noise Sensor
+    int   getNoise();      //Noise Sensor
 
     //-- Battery
     double getBatteryLevel();
@@ -83,9 +93,10 @@ class Otto
     void putMouth(unsigned long int mouth, bool predefined = true);
     void putAnimationMouth(unsigned long int anim, int index);
     void clearMouth();
-
+ 
     //-- Sounds
     void _tone (float noteFrequency, long noteDuration, int silentDuration);
+    void _playNote(float noteFrequency, long noteDuration);
     void bendTones (float initFrequency, float finalFrequency, float prop, long noteDuration, int silentDuration);
     void sing(int songName);
 
@@ -95,7 +106,8 @@ class Otto
  
   private:
     
-    MaxMatrix ledmatrix=MaxMatrix(12,10,11, 1);
+    MaxMatrix ledmatrix=MaxMatrix(PIN_DIN,PIN_CS,PIN_CLK, 1);  // init Max7219 LED Matrix, 1 module
+
     BatReader battery;
     Oscillator servo[4];
     US us;
