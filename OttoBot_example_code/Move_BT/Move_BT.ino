@@ -9,7 +9,7 @@
 #include "MaxMatrix.h"
 #include <US.h>
 #include <BatReader.h>
-SoftwareSerial mySerial(7,6);
+SoftwareSerial mySerial(6,7);
 Otto Otto;  //This is Otto!
 
 //---------------------------------------------------------
@@ -40,7 +40,7 @@ void setup(){
   Otto.init(PIN_YL,PIN_YR,PIN_RL,PIN_RR,true);
   Otto.home();
 
-  mySerial.begin(9600);
+  mySerial.begin(115200);
   mySerial.println("forward:8\nbackward:2\nleft:4\nright:6\nstand:5");
 }
 
